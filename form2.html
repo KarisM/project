@@ -141,7 +141,7 @@ function displayResponseTable(response){
     for(i = 0; i < arr.length; i++) {
         //("555");
         if(arr[i].StudentID!=""){
-         out += '<tr><td>'+arr[i].AppID+'</td><td>'+ arr[i].fName+' '+arr[i].lName+'</td><td>'+arr[i].StudentID+'</td><td></td></tr>';
+         out += '<tr><td>'+arr[i].AppID+'</td><td>'+ arr[i].fName+' '+arr[i].lName+'</td><td>'+arr[i].StudentID+'</td></tr>';
         }
         else{
             //out += '<tr><td>'+arr[i].AppID+'</td><td>'+ arr[i].fName+' '+arr[i].lName+'</td><td><INPUT TYPE = \"TEXT\" Name = \"studentID\" id = \"studentID\" SIZE = \"20\"></td><td><button onclick=getvalue('+arr[i].AppID+',\"'+arr[i].ProgramID+'\")>ADD</button></td></tr>';
@@ -156,5 +156,10 @@ function displayResponseTable(response){
 
 </script>
 </body>
+<br><p>OR Upload .csv File Here <br>
+<form action = "upload_Form2.php" method="post" enctype="multipart/form-data">
+    <input type="file" name="csv" id="fileToUpload"> 
+    <input type="submit" value="Add csv" name="submit">
+</form>
 
 </html>
