@@ -50,5 +50,5 @@ for ($i=1;$i<=$len;$i++){
         }
     }
 }
-header( "Refresh:5; url=http://127.0.0.1/project/form4.html", true, 303);
+header( "Refresh:1; url=http://127.0.0.1/project/form4.html", true, 303);
 ?>

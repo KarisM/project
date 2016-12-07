@@ -37,11 +37,12 @@ table tr:nth-child(even) {
 
 <title> Complex Form 4</title>
 <div class="t jumbotron container">
-<h2> Student_Course</h2>
+<h2> Student Course</h2>
+<br>
 <form action="addtocourse.php" method="post" >
     <title>Drop Down List</title>
     <body>
-     <div>
+    <div>
     <nav class="navbar navbar-inverse navbar-fixed-top " >
       <div class="container">
         <div id="navbar" class="collapse navbar-collapse">
@@ -55,10 +56,10 @@ table tr:nth-child(even) {
      </nav>
 </div>
     <div id="courselist"></div>
-    <br><br>
+    <br>
     <p>Table</p>
 	<div id="POItablediv">
-    <table class="table table-bordered"id="POITable" border="1">
+    <table class = "table table-bordered" id="POITable" border="1">
         <tr>
             <td>Number</td>
             <td>AppID</td>
@@ -73,23 +74,21 @@ table tr:nth-child(even) {
             <td><input type="button" id="delbutton" value="Delete" onclick="deleteRow(this)"/></td>
         </tr>
     </table>
-    
+    <br>
     <input size=10 type="hidden" id="maxrow" name = "i" value = "1" ><br>
     <input type="button" id="addmorebutton" value="Add More Button" onclick="insRow()"/>
 
     <br><br><input type="submit" value="Submit">
 	</div>
-    <br><p>OR Upload .csv File Here <br>
+    	<br><p>OR Upload .csv File Here <br>
 <form action = "upload_Form4.php" method="post" enctype="multipart/form-data">
-	<div id="courselist_csv"></div><br>
+	<div id="courselist_csv"></div><br><br>
     <input type="file" name="csv" id="fileToUpload"> 
-    <br>
     <input type="submit" value="Add csv" name="submit">
 </form>
 	</div>
-	</form>
-
 </div>
+
 	<script>
 	document.getElementById("maxrow").value = 1;
 	var max_row;
@@ -167,13 +166,12 @@ table tr:nth-child(even) {
 	    }
 	    out += "</select><\/script>";
 	    document.getElementById("courselist").innerHTML = out;
-	    document.getElementById("courselist_csv").innerHTML = out;
 
 	}
 
 	function displayResponseTable() {
 		var i;
-		var out = "<table class=\"table table-bordered\" id = \"myTable\">";
+		var out = "<table id = \"myTable\">";
 		for(i = 0; i < 2; i++) {
 		    out += "<tr><td>" +
 		    "<input type = \"text\" name = \"AppID"+i+"\">"+
@@ -188,5 +186,6 @@ table tr:nth-child(even) {
 	</script>
 	<br><br>
 
+</form>
 </body>
-</html>
+</html
